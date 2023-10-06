@@ -1,0 +1,515 @@
+#: import utils kivy.utils
+
+<Button>
+    disabled: True
+    background_normal: ""
+    color: (1,150/255,0,1)
+    font_size: 45
+    on_release: app.draw()
+    on_release: app.gameOver()
+    on_release: app.pawns()
+
+
+
+<MyLayout>
+
+    BoxLayout:
+        id: layout
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 10
+
+        BoxLayout:
+            orientation: "horizontal"
+
+            Button:
+                disabled: False
+                id: start
+                text: "Start"
+                on_press: root.start()
+            
+            Button: 
+                id: draw
+                text: "Draw"
+                on_press: root.draw()
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: A1
+                text: "R"
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: root.click("A1")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: A2
+                text: "N"
+                on_press: root.click("A2")
+            
+            Button:
+                id: A3
+                text: "B"
+                on_press: root.click("A3")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: A4
+                text: "K"
+                on_press: root.click("A4")
+                
+            Button:
+                id: A5
+                text: "Q"
+                on_press: root.click("A5")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: A6
+                text: "B"
+                on_press: root.click("A6")
+                
+            Button:
+                id: A7
+                text: "N"
+                on_press: root.click("A7")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: A8
+                text: "R"
+                on_press: root.click("A8")
+                on_release: app.gameOver()
+
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: B1
+                text: "P"
+                on_press: root.click("B1")
+                
+            Button:
+                id: B2
+                text: "P"
+                on_press: root.click("B2")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: B3
+                text: "P"
+                on_press: root.click("B3")
+                
+            Button:
+                id: B4
+                text: "P"
+                on_press: root.click("B4")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: B5
+                text: "P"
+                on_press: root.click("B5")
+                
+            Button:
+                id: B6
+                text: "P"
+                on_press: root.click("B6")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: B7
+                text: "P"
+                on_press: root.click("B7")
+                
+            Button:
+                id: B8
+                text: "P"
+                on_press: root.click("B8")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+        
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: C1
+                text: ""
+                on_press: root.click("C1")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: C2
+                text: ""
+                on_press: root.click("C2")
+                
+            Button:
+                id: C3
+                text: ""
+                on_press: root.click("C3")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: C4
+                text: ""
+                on_press: root.click("C4")
+                
+            Button:
+                id: C5
+                text: ""
+                on_press: root.click("C5")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: C6
+                text: ""
+                on_press: root.click("C6")
+                
+            Button:
+                id: C7
+                text: ""
+                on_press: root.click("C7")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: C8
+                text: ""
+                on_press: root.click("C8")
+                
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: D1
+                text: ""
+                on_press: root.click("D1")
+                
+            Button:
+                id: D2
+                text: ""
+                on_press: root.click("D2")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: D3
+                text: ""
+                on_press: root.click("D3")
+                
+            Button:
+                id: D4
+                text: ""
+                on_press: root.click("D4")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: D5
+                text: ""
+                on_press: root.click("D5")
+                
+            Button:
+                id: D6
+                text: ""
+                on_press: root.click("D6")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: D7
+                text: ""
+                on_press: root.click("D7")
+                
+            Button:
+                id: D8
+                text: ""
+                on_press: root.click("D8")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: E1
+                text: ""
+                on_press: root.click("E1")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: E2
+                text: ""
+                on_press: root.click("E2")
+                
+            Button:
+                id: E3
+                text: ""
+                on_press: root.click("E3")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: E4
+                text: ""
+                on_press: root.click("E4")
+                
+            Button:
+                id: E5
+                text: ""
+                on_press: root.click("E5")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: E6
+                text: ""
+                on_press: root.click("E6")
+                
+            Button:
+                id: E7
+                text: ""
+                on_press: root.click("E7")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: E8
+                text: ""
+                on_press: root.click("E8")
+                
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: F1
+                text: ""
+                on_press: root.click("F1")
+                
+            Button:
+                id: F2
+                text: ""
+                on_press: root.click("F2")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: F3
+                text: ""
+                on_press: root.click("F3")
+                
+            Button:
+                id: F4
+                text: ""
+                on_press: root.click("F4")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: F5
+                text: ""
+                on_press: root.click("F5")
+                
+            Button:
+                id: F6
+                text: ""
+                on_press: root.click("F6")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: F7
+                text: ""
+                on_press: root.click("F7")
+                
+            Button:
+                id: F8
+                text: ""
+                on_press: root.click("F8")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: G1
+                text: "p"
+                on_press: root.click("G1")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: G2
+                text: "p"
+                on_press: root.click("G2")
+                
+            Button:
+                id: G3
+                text: "p"
+                on_press: root.click("G3")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: G4
+                text: "p"
+                on_press: root.click("G4")
+                
+            Button:
+                id: G5
+                text: "p"
+                on_press: root.click("G5")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: G6
+                text: "p"
+                on_press: root.click("G6")
+                
+            Button:
+                id: G7
+                text: "p"
+                on_press: root.click("G7")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: G8
+                text: "p"
+                on_press: root.click("G8")
+                
+
+        BoxLayout:
+            orientation: "horizontal"
+            
+            Button:
+                id: H1
+                text: "r"
+                on_press: root.click("H1")
+                
+            Button:
+                id: H2
+                text: "n"
+                on_press: root.click("H2")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: H3
+                text: "b"
+                on_press: root.click("H3")
+                
+            Button:
+                id: H4
+                text: "k"
+                on_press: root.click("H4")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: H5
+                text: "q"
+                on_press: root.click("H5")
+                
+            Button:
+                id: H6
+                text: "b"
+                on_press: root.click("H6")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+            
+            Button:
+                id: H7
+                text: "n"
+                on_press: root.click("H7")
+                
+            Button:
+                id: H8
+                text: "r"
+                on_press: root.click("H8")
+                background_color: utils.get_color_from_hex("#000000")
+                on_press: self.background_color = utils.get_color_from_hex("#FFFFFF")
+                on_release: self.background_color = utils.get_color_from_hex("#000000")
+        
+        BoxLayout:
+            id: box
+            size_hint: (None,None)
+            size: (0,0)
+            Label:
+                id: go
+
+        BoxLayout:
+            id: pawns
+            padding: 20
+            spacing: 40
+            Label:
+                size_hint: (3,1)
+                background_color: utils.get_color_from_hex("#000000")
+                text: "Pawn Promotion"
+                font_size: 30
+            Button:
+                text: "Q"
+                on_press: app.pawn_promotion("Qn")
+
+            Button:
+                text: "N"
+                on_press: app.pawn_promotion("Kt")
+
+            Button:
+                text: "B"
+                on_press: app.pawn_promotion("Bs")
+
+            Button:
+                text: "R"
+                on_press: app.pawn_promotion("Rk")
